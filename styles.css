@@ -15,5 +15,46 @@ body {
 }
 
 .number {
-    border: 1px solid black;
+    border: 1px solid rgb(4, 53, 24);
+    border-radius: 10px;
+}
+
+.number:hover {
+    background-color: rgb(145, 180, 84);
+}
+
+.operator {
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.operator:hover {
+    background-color: rgb(248, 159, 159);
+}
+
+.decimal {
+    border: 1px solid burlywood;
+    border-radius: 10px;
+}
+
+.decimal:hover {
+    background-color: rgb(245, 212, 170);
+}
+
+#clear-btn {
+    border: 1px solid rgb(42, 31, 119);
+    border-radius: 10px;
+}
+
+#clear-btn:hover {
+    background-color: rgb(93, 72, 228);
+}
+
+.equal {
+    border: 1px solid rgb(4, 53, 24);
+    border-radius: 10px;
+}
+
+.equal:hover {
+    background-color: rgb(145, 180, 84);
 }
