@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
         handleOperator(e.target.textContent)
         previousScreen.textContent = previousValue + ' ' + operator;
         currentScreen.textContent = currentValue;
-    }))
+    }));
 
     clear.addEventListener('click', function() {
         previousValue = '';
@@ -31,12 +31,18 @@ document.addEventListener('DOMContentLoaded', function(){
         operator = '';
         previousScreen.textContent = currentValue;
         currentScreen.textContent = currentValue;
-    })
+    });
 
     equal.addEventListener('click', function() {
-        calculate()
-        previousScreen.textContent = '';
-        currentScreen.textContent = previousValue;
+        if(currentValue != '' && previousValue != ''){
+            calculate()
+            previousScreen.textContent = '';
+            if(previousValue.length <= 5) {
+                currentScreen.textContent = previousValue;
+            } else{
+                currentScreen.textContent = previousValue.slice(0,5) + '...';
+            }
+        }
     })
 
 });
